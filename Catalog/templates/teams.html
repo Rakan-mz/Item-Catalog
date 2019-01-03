@@ -1,0 +1,43 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+	<div class="jumbotron">
+		<h1 class="h1l">The Team List </h1>
+		<p id="mm"> A bunch of The Best Teams that i like it (specially the first one)</p>
+	</div>
+
+<div class = 'flash'>
+		      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+
+        <ul>
+        {% for message in messages %}
+            <li> <strong> {{ message }} </strong> </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+
+</div>
+
+	<div class="row padding-top padding-bottom">
+		<div class="col-md-1"></div>
+		<div class="col-md-10 padding-none">
+				<div class="button_cont " ><a class="example_b fas fa-plus" href="{{url_for('newTeam')}}"  > Add Team</a></div>
+			</a>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	{% for team in teams %}
+		<a href = "{{url_for('showMenu', team_id = team.id)}}">
+			<div class="row">
+				<div class="col-md-1"></div>
+					<div class="col-md-10 restaurant-list">
+						<h3>{{team.name}}</h3>
+					</div>
+				<div class="col-md-1"></div>
+			</div>
+		</a>
+	{% endfor %}
+{% endblock %}

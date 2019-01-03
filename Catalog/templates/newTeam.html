@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="container">
+	<div class="jumbotron for">
+	 	<h1> <i class="fas fa-plus"></i> Add new Team </h1>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="#" method = "post">
+				<div class="form-group">
+				<label for="name">Name:</label>
+				<input type ="text" class="form-control" maxlength="100" name="name">
+				<div class="padding-bottom"></div>
+				<button type="button" class="btn btn-primary" >
+				<span class="fas fa-plus" aria-hidden="true"></span> Create</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
