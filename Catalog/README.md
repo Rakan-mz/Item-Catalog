@@ -70,7 +70,7 @@ Now type python database_setup.py to initialize the database.
 
 Type python teammenu.py to populate the database with teams and menu players.
 
-Type python project.py to run the Flask web server. In your browser visit http://localhost:8000 to view the Team menu app. You should be able to view, add, edit, and delete menu items and restaurants.
+Type python project.py to run the Flask web server. In your browser visit http://localhost:8000 to view the Team menu app. You should be able to view, add, edit, and delete menu Players and Teams.
 
 
 ### Shutting the VM down
